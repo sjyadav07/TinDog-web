@@ -1,0 +1,76 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+.gradient-background {
+    background: linear-gradient(300deg, #2c3e87, #92fbd3, #d237fc);
+    background-size: 180% 180%;
+    animation: gradient-animation 4s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* .flying-img {
+    width: 100px;
+    /*Adjust image size*
+    position: absolute;
+    animation: flyAcross 10s linear infinite;
+}
+
+@keyframes flyAcross {
+    0% {
+        transform: translateX(-100%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(50vw) translateY(-50px) rotate(15deg);
+    }
+
+    100% {
+        transform: translateX(100vw) translateY(0) rotate(-15deg);
+    }
+} */
+
+.icon-square {
+    width: 3rem;
+    height: 3rem;
+    border-radius: .75rem;
+}
+
+.fly-in-image {
+    /* width: 100%;
+    height: auto; */
+    height: 100%;
+    width: auto;
+    position: relative;
+    animation: flyIn 4s ease-out forwards;
+    transform: translateY(-100%);
+    /* Start off-screen */
+}
+
+/* Keyframes for fly-in effect */
+@keyframes flyIn {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
